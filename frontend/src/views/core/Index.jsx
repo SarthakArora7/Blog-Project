@@ -46,7 +46,7 @@ function Index() {
                             <a href="#" className="d-block card-img-flash">
                                 <img src="assets/images/adv-3.png" alt="" />
                             </a>
-                            <h2 className="text-start d-block mt-1">Trending Articles 🔥</h2>
+                            <h2 className="text-start d-block mt-1">Trending Articles</h2>
                         </div>
                     </div>
                 </div>
