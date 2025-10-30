@@ -31,14 +31,13 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'https://blog-project-lake-xi.vercel.app',
-    'https://blog-project-nw47.onrender.com',
+    'blog-project-lake-xi.vercel.app',
+    'blog-project-nw47.onrender.com',
 ]
 
 
 CORS_ALLOWED_ORIGINS = [
     "https://blog-project-lake-xi.vercel.app",
-    "https://blog-project-nw47.onrender.com"
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://blog-project-lake-xi.vercel.app",
