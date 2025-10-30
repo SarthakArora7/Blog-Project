@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
-import Index from "./views/core"
+import Index from "./views/core/Index"
 import MainWrapper from '../src/layouts/MainWrapper'
 import Detail from "./views/core/Detail";
 import Search from "./views/core/Search";
