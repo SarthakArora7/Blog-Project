@@ -21,8 +21,7 @@ import Notifications from "./views/dashboard/Notifications";
 import Profile from "./views/dashboard/Profile";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
   return (
     <>
       <BrowserRouter>
@@ -56,7 +55,7 @@ function App() {
         </MainWrapper>
       </BrowserRouter>
     </>
-  )
+  );
 }
 
 export default App
