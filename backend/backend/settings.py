@@ -36,13 +36,13 @@ ALLOWED_HOSTS = [
 ]
 
 
-CORS_ALLOWED_ORIGINS = [
-    "https://blog-project-lake-xi.vercel.app",
-]
 CSRF_TRUSTED_ORIGINS = [
     "https://blog-project-lake-xi.vercel.app",
     "https://blog-project-nw47.onrender.com"
 ] 
+CORS_ALLOWED_ORIGINS = [
+    "https://blog-project-lake-xi.vercel.app",
+]
 
 
 # Application definition
