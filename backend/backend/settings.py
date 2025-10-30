@@ -35,7 +35,6 @@ ALLOWED_HOSTS = [
     'blog-project-nw47.onrender.com',
 ]
 
-
 CSRF_TRUSTED_ORIGINS = [
     "https://blog-project-lake-xi.vercel.app",
     "https://blog-project-nw47.onrender.com"
@@ -109,7 +108,7 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    'default': dj_database_url.config(default='postgresql://blogtagdb_user:GBYoFqP4z4NhNhiOSQ21nDhavUl0xsra@dpg-d41rice3jp1c739k03p0-a/blogtagdb')
 }
 
 
