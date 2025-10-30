@@ -29,10 +29,13 @@ SECRET_KEY = 'django-insecure-foyr%1*xf*@4*y$_s_-qdli(l$h$uv-36$@d-@n@7lxqw-)-6x
 DEBUG = False
 
 CORS_ALLOWED_ORIGINS = [
-    "blog-project-lake-xi.vercel.app",
+    "https://blog-project-lake-xi.vercel.app",
     "https://blog-project-nw47.onrender.com"
 ]
-CSRF_TRUSTED_ORIGINS = ["blog-project-lake-xi.vercel.app"] 
+CSRF_TRUSTED_ORIGINS = [
+    "https://blog-project-lake-xi.vercel.app",
+    "https://blog-project-nw47.onrender.com"
+] 
 
 
 # Application definition
