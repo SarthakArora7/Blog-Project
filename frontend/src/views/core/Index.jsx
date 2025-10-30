@@ -7,14 +7,20 @@ import moment from "moment";
 import apiInstance from "../../utils/axios";
 import useUserData from "../../plugin/useUserData";
 import Toast from "../../plugin/Toast";
+import axios from "axios";
 
 function Index() {
     const [posts, setPosts] = useState([]);
     const [popularPosts, setPopularPosts] = useState([]);
     const [category, setCategory] = useState([]);
 
+    // console.log(import.meta.env.VITE_BLOG_APP_API_URL);
+
     const fetchPosts = async () => {
-        const response = await apiInstance.get(`post/lists/`);
+        // const response = await apiInstance.get(`post/lists/`);
+        const response = await axios.get(
+          "https://blog-project-nw47.onrender.com/api/v1/post/lists/"
+        );
         setPosts(response.data);  // response.data will be an object or array as we are sending through the serializer of the endpoint.
     };
 
