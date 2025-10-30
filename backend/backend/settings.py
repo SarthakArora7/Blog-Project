@@ -15,6 +15,12 @@ from datetime import timedelta
 import os
 import dj_database_url
 
+# Cloudinary imports
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -63,6 +69,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'drf_yasg',
+    'cloudinary',
+    'cloudinary_storage'
 ]
 
 MIDDLEWARE = [
@@ -114,6 +122,15 @@ DATABASES = {
         ssl_require=True
     )
 }
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dhupqgmck',
+    'API_KEY': 644425875436472,
+    'API_SECRET': 'MZSw9XcgifSsiHwlU9w96kDy08A',
+}
+
+# Set Cloudinary as the default file storage
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Password validation
