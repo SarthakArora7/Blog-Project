@@ -108,7 +108,11 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    'default': dj_database_url.config(default='postgresql://blogtagdb_user:GBYoFqP4z4NhNhiOSQ21nDhavUl0xsra@dpg-d41rice3jp1c739k03p0-a/blogtagdb')
+    'default': dj_database_url.config(
+        default='postgresql://blogtagdb_user:GBYoFqP4z4NhNhiOSQ21nDhavUl0xsra@dpg-d41rice3jp1c739k03p0-a.oregon-postgres.render.com/blogtagdb',
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 
