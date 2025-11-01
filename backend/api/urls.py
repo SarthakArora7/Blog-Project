@@ -1,8 +1,15 @@
 from django.urls import path
 from rest_framework_simplejwt.views import TokenRefreshView
 from api import views as api_views
+# from .views import test_cloudinary, direct_upload_test, simple_upload_test    
 
 urlpatterns = [
+
+    # path('test-cloudinary/', test_cloudinary, name='test-cloudinary'),
+    # path('upload-test/', direct_upload_test, name='upload-test'),
+    # path('simple-upload-test/', simple_upload_test, name='simple-upload-test'),
+
+
     path("user/token/", api_views.MyTokenObtainPairView.as_view()),
     path('user/token/refresh/', TokenRefreshView.as_view()),
     path('user/register/', api_views.RegisterView.as_view()),

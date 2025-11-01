@@ -29,6 +29,108 @@ import random
 from api import serializer as api_serializer
 from api import models as api_models
 
+from django.http import JsonResponse
+import cloudinary
+import cloudinary.uploader
+
+import cloudinary.uploader
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+import tempfile
+import os
+
+# @csrf_exempt
+# def simple_upload_test(request):
+#     if request.method == 'POST':
+#         try:
+#             # Just check if we receive the file
+#             if request.FILES.get('image'):
+#                 file = request.FILES['image']
+#                 return JsonResponse({
+#                     'status': 'success',
+#                     'message': 'File received',
+#                     'file_name': file.name,
+#                     'file_size': file.size,
+#                     'content_type': file.content_type
+#                 })
+#             else:
+#                 return JsonResponse({
+#                     'status': 'error',
+#                     'message': 'No file received'
+#                 }, status=400)
+                
+#         except Exception as e:
+#             return JsonResponse({
+#                 'status': 'error',
+#                 'message': f"Error: {str(e)}"
+#             }, status=500)
+    
+#     return JsonResponse({'status': 'error', 'message': 'Only POST method allowed'})
+
+# @csrf_exempt
+# def direct_upload_test(request):
+#     if request.method == 'POST':
+#         try:
+#             if not request.FILES.get('image'):
+#                 return JsonResponse({
+#                     'status': 'error', 
+#                     'message': 'No image file provided'
+#                 }, status=400)
+            
+#             image_file = request.FILES['image']
+            
+#             # Save file temporarily to avoid memory issues
+#             with tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(image_file.name)[1]) as temp_file:
+#                 for chunk in image_file.chunks():
+#                     temp_file.write(chunk)
+#                 temp_file_path = temp_file.name
+            
+#             try:
+#                 # Upload from temporary file
+#                 with open(temp_file_path, 'rb') as file:
+#                     result = cloudinary.uploader.upload(
+#                         file,
+#                         folder="posts",
+#                         resource_type="image"
+#                     )
+                
+#                 return JsonResponse({
+#                     'status': 'success',
+#                     'url': result['url'],
+#                     'public_id': result['public_id']
+#                 })
+                
+#             finally:
+#                 # Clean up temporary file
+#                 if os.path.exists(temp_file_path):
+#                     os.unlink(temp_file_path)
+            
+#         except Exception as e:
+#             return JsonResponse({
+#                 'status': 'error',
+#                 'message': str(e)
+#             }, status=500)
+    
+#     return JsonResponse({'status': 'error', 'message': 'Only POST method allowed'})
+
+# def test_cloudinary(request):
+#     try:
+#         # Test Cloudinary configuration
+#         result = cloudinary.uploader.upload(
+#             "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+#             public_id="test_image"
+#         )
+#         return JsonResponse({
+#             'status': 'success',
+#             'message': 'Cloudinary is working!',
+#             'url': result['url']
+#         })
+#     except Exception as e:
+#         return JsonResponse({
+#             'status': 'error',
+#             'message': str(e)
+#         }, status=500)
+
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = api_serializer.MyTokenObtainPairSerializer
 

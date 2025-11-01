@@ -123,11 +123,23 @@ DATABASES = {
     )
 }
 
+cloudinary.config( 
+  cloud_name = 'dhupqgmck',
+  api_key = 644425875436472, 
+  api_secret = 'MZSw9XcgifSsiHwlU9w96kDy08A',
+  secure = True
+)
+
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dhupqgmck',
     'API_KEY': 644425875436472,
     'API_SECRET': 'MZSw9XcgifSsiHwlU9w96kDy08A',
 }
+
+FILE_UPLOAD_HANDLERS = [
+    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+    'django.core.files.uploadhandler.MemoryFileUploadHandler',
+]
 
 # Set Cloudinary as the default file storage
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

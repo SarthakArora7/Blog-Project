@@ -30,7 +30,7 @@ class User(AbstractUser):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.FileField(upload_to="image", default="default/default-user.jpg", null=True, blank=True)
+    image = models.ImageField(upload_to="image", default="default/default-user.jpg", null=True, blank=True)
     full_name = models.CharField(max_length=100, null=True, blank=True)
     bio = models.TextField(null=True, blank=True)
     about = models.TextField(null=True, blank=True)
@@ -68,7 +68,7 @@ post_save.connect(save_user_profile, sender=User)
 
 class Category(models.Model):
     title = models.CharField(max_length=100)
-    image = models.FileField(upload_to="image", null=True, blank=True)
+    image = models.ImageField(upload_to="image", null=True, blank=True)
     slug = models.SlugField(unique=True, null=True, blank=True)
 
     def __str__(self):
