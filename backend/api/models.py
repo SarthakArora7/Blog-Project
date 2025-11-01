@@ -93,7 +93,7 @@ class Post(models.Model):
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True, blank=True)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to="image", null=True, blank=True)
     description = models.TextField(null=True, blank=True)
