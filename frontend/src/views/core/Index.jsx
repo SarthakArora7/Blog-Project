@@ -66,7 +66,7 @@ function Index() {
                                     <div className="card-body px-3 pt-3">
                                         <h4 className="card-title">
                                             <Link to={`posts/${p.slug}`} className="btn-link text-reset stretched-link fw-bold text-decoration-none">
-                                                {p.title?.slice(0, 32) + "..."}
+                                                {p.title?.slice(0, 20) + "..."}
                                             </Link>
                                         </h4>
                                         <button type="button" onClick={() => handleBookmarkPost(p.id)} style={{ border: "none", background: "none" }}>
