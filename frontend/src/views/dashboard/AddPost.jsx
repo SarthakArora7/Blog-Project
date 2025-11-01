@@ -120,7 +120,7 @@ function AddPost() {
                                                     <h1 className="text-white mb-1">Create Blog Post</h1>
                                                     <p className="mb-0 text-white lead">Use the article builder below to write your article.</p>
                                                 </div>
-                                                <div>
+                                                {/* <div>
                                                     <Link to="/instructor/posts/" className="btn" style={{ backgroundColor: "white" }}>
                                                         {" "}
                                                         <i className="fas fa-arrow-left"></i> Back to Posts
@@ -128,7 +128,7 @@ function AddPost() {
                                                     <a href="instructor-posts.html" className="btn btn-dark ms-2">
                                                         Save Changes <i className="fas fa-check-circle"></i>
                                                     </a>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     </div>
